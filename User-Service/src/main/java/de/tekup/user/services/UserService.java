@@ -51,7 +51,7 @@ public class UserService implements UserDetailsService{
         
         UserDTO userDto = new ModelMapper().map(userEntity, UserDTO.class);
  
-        
+        // call the album service
         List<AlbumResponseModel> albumsList = albumsServiceClient.getAlbums(userId);
         
         
